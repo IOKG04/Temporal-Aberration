@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour{
     void FixedUpdate(){
         velocityChangeTimer.x += Time.fixedDeltaTime;
         velocityChangeTimer.y += Time.fixedDeltaTime;
-        rb.velocity = new Vector2(Mathf.Lerp(velocityLastChange.x, velocityTarget.x, velocityChangeTimer.x / velocityChangeTime), Mathf.Lerp(velocityLastChange.y, velocityTarget.y, velocityChangeTimer.y / velocityChangeTime));
+        rb.velocity = new Vector2(Mathf.Lerp(velocityLastChange.x, velocityTarget.x, Mathf.Sqrt(velocityChangeTimer.x / velocityChangeTime)),
+                                  Mathf.Lerp(velocityLastChange.y, velocityTarget.y, Mathf.Sqrt(velocityChangeTimer.y / velocityChangeTime)));
     }
 }
