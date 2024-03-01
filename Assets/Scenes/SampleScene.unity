@@ -385,7 +385,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -611,7 +611,6 @@ GameObject:
   - component: {fileID: 829760870}
   - component: {fileID: 829760869}
   - component: {fileID: 829760868}
-  - component: {fileID: 829760873}
   m_Layer: 0
   m_Name: WalkGuy
   m_TagString: WalkGuy
@@ -632,8 +631,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 829760870}
-  target: {fileID: 530714179}
+  target: {fileID: 530714182}
+  distanceToTarget: 3
+  distanceMaxDifference: 0.25
   speed: 2
+  accelerationTimer: 0
+  accelerationTime: 0.3333333
+  taServer: {fileID: 530714183}
 --- !u!61 &829760869
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -773,21 +777,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &829760873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 829760867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e020ca11d1b588d8bbc20c33caebb9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  server: {fileID: 530714183}
-  localTimeScale: 0
-  rb: {fileID: 829760870}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

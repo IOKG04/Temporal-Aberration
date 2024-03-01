@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour{
     private bool changedDirectionX, changedDirectionY; // was a direction button pressed this physics frame
 
     void Start(){
+        rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
     void Update(){
