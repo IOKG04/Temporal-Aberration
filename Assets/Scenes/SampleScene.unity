@@ -474,8 +474,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.95, y: 0.95}
-  m_EdgeRadius: 0
+  m_Size: {x: 0.9, y: 0.9}
+  m_EdgeRadius: 0.05
 --- !u!50 &530714182
 Rigidbody2D:
   serializedVersion: 4
@@ -1330,7 +1330,7 @@ GameObject:
   - component: {fileID: 1632156400}
   m_Layer: 0
   m_Name: Gun_Player
-  m_TagString: Untagged
+  m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1343,8 +1343,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1632156397}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.9, y: -0.15625, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1, y: -0.125, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1416,6 +1416,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 1970151550}
   spriteRenderer: {fileID: 1632156399}
+  reloadTimer: 0
+  reloadTime: 0.55
+  bullet: {fileID: 8191538004837939424, guid: 891cd81bcb3b5ad0c8857da5b0c5177e, type: 3}
+  bulletSpeed: 6.666667
+  server: {fileID: 530714183}
 --- !u!1 &1793331384
 GameObject:
   m_ObjectHideFlags: 0
