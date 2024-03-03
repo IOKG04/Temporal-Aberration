@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2352066767052017980}
   - component: {fileID: 8688959028145153997}
   - component: {fileID: 3847383870296877663}
-  - component: {fileID: 7122728944023371829}
   m_Layer: 0
   m_Name: WalkGuy
   m_TagString: WalkGuy
@@ -223,36 +222,6 @@ MonoBehaviour:
   active: 0
   gun: {fileID: 7445344656313548052}
   server: {fileID: 0}
---- !u!114 &7122728944023371829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 966631052294168232}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
-  m_ComponentVersion: 1
-  m_HasRenderer: 1
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 0
-  m_ApplyToSortingLayers: 00000000
-  m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  m_ShapePathHash: 0
-  m_Mesh: {fileID: 0}
-  m_InstanceId: 36454
-  m_LocalBounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0.5, y: 0.5, z: 0}
 --- !u!1 &3804284278143827134
 GameObject:
   m_ObjectHideFlags: 0

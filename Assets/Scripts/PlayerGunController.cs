@@ -46,6 +46,7 @@ public class PlayerGunController : MonoBehaviour{
         // shooting / reloading
         reloadTimer += Time.deltaTime * localTimeScale;
         if(reloadTimer > reloadTime){
+            transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, 0f);
             if(Input.GetButton("shoot")){
                 // shoot
                 GameObject newBullet = Instantiate(bullet, transform.position + (Vector3)(transform.localToWorldMatrix * new Vector3(-4.5f / 16, spriteRenderer.flipY ? -0.125f : 0.125f, 0)), Quaternion.Euler(0, 0, transform.eulerAngles.z + 90));

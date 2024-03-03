@@ -40,7 +40,7 @@ public class WalkGuyGunController : MonoBehaviour{
             aimTimer += Time.deltaTime * localTimeScale;
             if(aimTimer > aimTime){
                 if(Random.Range(0, 1) < aimPredictionChance){
-                    Vector2 predictedPosition = target.position + (target.velocity * ((target.position - (Vector2)transform.position).magnitude / bulletSpeed) * Random.Range(0.9f, 1.05f));
+                    Vector2 predictedPosition = target.position + (target.velocity * ((target.position - (Vector2)transform.position).magnitude / bulletSpeed) * Random.Range(0.75f, 1.05f));
                     aimTarget = Vector2.SignedAngle(Vector2.right, (Vector2)parent.position - predictedPosition);
                 }
                 else aimTarget = Vector2.SignedAngle(Vector2.right, (Vector2)parent.position - target.position);
