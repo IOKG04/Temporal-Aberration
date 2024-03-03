@@ -25,7 +25,6 @@ public class PlayerGunController : MonoBehaviour{
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 relativePosition = mousePosition - (Vector2)parent.position;
         parent.localEulerAngles = new Vector3(0, 0, Vector2.SignedAngle(Vector2.left, relativePosition));
-        //parent.up = new Vector2(relativePosition.y, -relativePosition.x);
 
         // set mirroring
         spriteRenderer.flipY = Vector2.Dot(parent.up, Vector2.up) < 0;

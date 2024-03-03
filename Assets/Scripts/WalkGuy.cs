@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
+using Unity.VisualScripting;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 
@@ -20,6 +21,7 @@ public class WalkGuy : MonoBehaviour{
     public float viewCheckTimer, viewCheckTime;
 
     public bool active;
+    public WalkGuyGunController gun;
 
     public TAServer taServer;
     private float localTimeScale;
@@ -75,7 +77,7 @@ public class WalkGuy : MonoBehaviour{
                     }
                 }
                 if(!hitPlayer){
-                    active = false;
+                    Deactivate();
                     accelerationTimer = 0f;
                     lastVelocity = rb.velocity;
                 }
@@ -103,12 +105,22 @@ public class WalkGuy : MonoBehaviour{
                 for(int i = 0; i < hits.Length; i++){
                     if(hits[i].collider.gameObject.CompareTag("Wall")) break;
                     if(hits[i].collider.gameObject.CompareTag("Player")){
-                        active = true;
-                        target = hits[i].collider.gameObject.GetComponent<Rigidbody2D>();
+                        Activate(hits[i].collider.gameObject.GetComponent<Rigidbody2D>());
                         break;
                     }
                 }
             }
         }
+    }
+
+    void Activate(Rigidbody2D _target){
+        active = true;
+        target = _target;
+        gun.active = true;
+        gun.target = _target;
+    }
+    void Deactivate(){
+        active = false;
+        gun.active = false;
     }
 }
