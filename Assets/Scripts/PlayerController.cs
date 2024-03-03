@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour{
                                   Mathf.Lerp(velocityLastChange.y, velocityTarget.y, Mathf.Sqrt(velocityChangeTimer.y / velocityChangeTime)));
     }
     void OnCollisionEnter2D(Collision2D col){
-        if(col.gameObject.CompareTag("Bullet")){
+        if(col.gameObject.CompareTag("EnemyBullet")){
             hitPoints--;
             if(hitPoints <= 0) Lose();
         }

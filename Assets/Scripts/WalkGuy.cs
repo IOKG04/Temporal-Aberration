@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.Design;
 using Unity.VisualScripting;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
+using UnityEditor.SearchService;
 using UnityEngine;
 
 public class WalkGuy : MonoBehaviour{
@@ -23,7 +24,7 @@ public class WalkGuy : MonoBehaviour{
     public bool active;
     public WalkGuyGunController gun;
 
-    public TAServer taServer;
+    public TAServer server;
     private float localTimeScale;
 
     void Start(){
@@ -35,10 +36,12 @@ public class WalkGuy : MonoBehaviour{
         viewCheckTime *= Random.Range(0.95f, 1.05f);
         trigger = gameObject.GetComponent<CircleCollider2D>();
         trigger.radius *= Random.Range(0.9f, 1.1f);
+        server = GameObject.Find("Player").GetComponent<TAServer>();
+        gun.server = server;
     }
     void FixedUpdate(){
         // calculate local time scale
-        localTimeScale = taServer.LocalTimeScale(transform.position);
+        localTimeScale = server.LocalTimeScale(transform.position);
 
         if(active){
             // calculate movement
