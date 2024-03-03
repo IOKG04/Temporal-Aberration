@@ -83,6 +83,13 @@ public class WalkGuyGunController : MonoBehaviour{
             // set mirroring
             spriteRenderer.flipY = Vector2.Dot(parent.up, Vector2.up) < 0;
             transform.localPosition = new Vector2(transform.localPosition.x, spriteRenderer.flipY ? 0.125f : -0.125f);
+
+            // reloading
+            if(showReloadAnimation){
+                reloadTimer += Time.deltaTime * localTimeScale;
+                transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, Mathf.Lerp(0, spriteRenderer.flipY ? -360 : 360, reloadTimer / (reloadTime - aimTime)));
+                if(reloadTimer >= reloadTime - aimTime) showReloadAnimation = false;
+            }
         }
     }
     void FixedUpdate(){

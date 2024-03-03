@@ -12,10 +12,11 @@ public class PlayerController : MonoBehaviour{
     public float speed;
     private bool changedDirectionX, changedDirectionY; // was a direction button pressed this physics frame
 
-    public int hitPoints;
+    public int hitPoints, maxHitPoints;
 
     void Start(){
         rb = gameObject.GetComponent<Rigidbody2D>();
+        hitPoints = maxHitPoints;
     }
 
     void Update(){
