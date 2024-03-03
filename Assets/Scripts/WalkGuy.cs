@@ -14,6 +14,8 @@ public class WalkGuy : MonoBehaviour{
     private bool accelerating; // used as switch between accelerating and decelerating, just dont take this name too literally, look at the code before u change it
     public float accelerationTimer, accelerationTime;
 
+    public int hitPoints;
+
     public CircleCollider2D trigger;
     public float viewCheckTimer, viewCheckTime;
 
@@ -82,6 +84,14 @@ public class WalkGuy : MonoBehaviour{
         else{
             accelerationTimer += Time.fixedDeltaTime * localTimeScale;
             rb.velocity = Vector2.Lerp(lastVelocity, Vector2.zero, Mathf.Sqrt(accelerationTimer / accelerationTime)) * localTimeScale;
+        }
+    }
+    void OnCollisionEnter2D(Collision2D col){
+        if(col.gameObject.CompareTag("Bullet")){
+            hitPoints--;
+            if(hitPoints <= 0){
+                Destroy(gameObject);
+            }
         }
     }
     void OnTriggerStay2D(Collider2D col){

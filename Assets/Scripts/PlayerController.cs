@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour{
     public Rigidbody2D rb;
@@ -9,8 +11,9 @@ public class PlayerController : MonoBehaviour{
     public Vector2 velocityTarget, velocityLastChange, velocityChangeTimer;
     public float velocityChangeTime;
     public float speed;
-
     private bool changedDirectionX, changedDirectionY; // was a direction button pressed this physics frame
+
+    public int hitPoints;
 
     void Start(){
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -46,5 +49,15 @@ public class PlayerController : MonoBehaviour{
         velocityChangeTimer.y += Time.fixedDeltaTime;
         rb.velocity = new Vector2(Mathf.Lerp(velocityLastChange.x, velocityTarget.x, Mathf.Sqrt(velocityChangeTimer.x / velocityChangeTime)),
                                   Mathf.Lerp(velocityLastChange.y, velocityTarget.y, Mathf.Sqrt(velocityChangeTimer.y / velocityChangeTime)));
+    }
+    void OnCollisionEnter2D(Collision2D col){
+        if(col.gameObject.CompareTag("Bullet")){
+            hitPoints--;
+            if(hitPoints <= 0) Lose();
+        }
+    }
+
+    void Lose(){
+        SceneManager.LoadScene("SampleScene");
     }
 }

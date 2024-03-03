@@ -24,7 +24,8 @@ public class PlayerGunController : MonoBehaviour{
         // set parent rotation
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 relativePosition = mousePosition - (Vector2)parent.position;
-        parent.up = new Vector2(relativePosition.y, -relativePosition.x);
+        parent.localEulerAngles = new Vector3(0, 0, Vector2.SignedAngle(Vector2.left, relativePosition));
+        //parent.up = new Vector2(relativePosition.y, -relativePosition.x);
 
         // set mirroring
         spriteRenderer.flipY = Vector2.Dot(parent.up, Vector2.up) < 0;
@@ -46,9 +47,8 @@ public class PlayerGunController : MonoBehaviour{
         // shooting / reloading
         reloadTimer += Time.deltaTime * localTimeScale;
         if(reloadTimer > reloadTime){
-            if(Input.GetButtonDown("shoot")){
+            if(Input.GetButton("shoot")){
                 // shoot
-                Debug.Log("Shot a bullet (once implemented)");
                 GameObject newBullet = Instantiate(bullet, transform.position + (Vector3)(transform.localToWorldMatrix * new Vector3(-4.5f / 16, spriteRenderer.flipY ? -0.125f : 0.125f, 0)), Quaternion.Euler(0, 0, transform.eulerAngles.z + 90));
                 newBullet.GetComponent<BulletController>().server = server;
                 newBullet.GetComponent<BulletController>().velocity = newBullet.transform.up.normalized * bulletSpeed;

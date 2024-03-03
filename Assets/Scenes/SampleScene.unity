@@ -431,6 +431,7 @@ MonoBehaviour:
   velocityChangeTimer: {x: 0, y: 0}
   velocityChangeTime: 0.2
   speed: 4
+  hitPoints: 5
 --- !u!61 &530714181
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1138,6 +1139,7 @@ MonoBehaviour:
   speed: 2
   accelerationTimer: 0
   accelerationTime: 0.3333333
+  hitPoints: 2
   trigger: {fileID: 829760873}
   viewCheckTimer: 0
   viewCheckTime: 0.5
