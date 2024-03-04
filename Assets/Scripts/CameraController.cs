@@ -11,10 +11,9 @@ public class CameraController : MonoBehaviour{
 
     void Start(){
         thisCamera = gameObject.GetComponent<Camera>();
-        //thisCamera.aspect = 16f / 9f;
     }
     void Update(){
         Vector3 finalTarget = target.position + new Vector3(0, 0, zOffset);
-        transform.position = finalTarget;
+        transform.localPosition = finalTarget;
     }
 }

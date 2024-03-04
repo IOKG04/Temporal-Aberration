@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -13,10 +15,25 @@ public class PlayerController : MonoBehaviour{
     private bool changedDirectionX, changedDirectionY; // was a direction button pressed this physics frame
 
     public int hitPoints, maxHitPoints;
+    public VoidTask hitPointChange;
+    public SpriteRenderer spriteRenderer;
+    public Sprite[] sprites;
 
     void Start(){
         rb = gameObject.GetComponent<Rigidbody2D>();
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         hitPoints = maxHitPoints;
+        hitPointChange += () => {
+            // change sprite
+            if(hitPoints < sprites.Length){
+                spriteRenderer.sprite = sprites[hitPoints];
+            }
+
+            // lose is too few hitpoints
+            if(hitPoints <= 0){
+                Lose();
+            }
+        };
     }
 
     void Update(){
@@ -53,7 +70,7 @@ public class PlayerController : MonoBehaviour{
     void OnCollisionEnter2D(Collision2D col){
         if(col.gameObject.CompareTag("EnemyBullet")){
             hitPoints--;
-            if(hitPoints <= 0) Lose();
+            hitPointChange();
         }
     }
 
@@ -61,3 +78,5 @@ public class PlayerController : MonoBehaviour{
         SceneManager.LoadScene("SampleScene");
     }
 }
+
+public delegate void VoidTask();
