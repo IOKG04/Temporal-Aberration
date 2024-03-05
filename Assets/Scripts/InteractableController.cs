@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Timeline;
 
 public class InteractableController : MonoBehaviour{
-    public GameObject textBox;
+    public GameObject textBox, interactAbleIndicator;
     public bool check, active;
     public int timesActivated;
     public string[] lines;
@@ -21,6 +21,7 @@ public class InteractableController : MonoBehaviour{
     void OnTriggerEnter2D(Collider2D col){
         if(col.CompareTag("Player")){
             check = true;
+            interactAbleIndicator.SetActive(true);
         }
     }
     void OnTriggerExit2D(Collider2D col){
@@ -28,6 +29,7 @@ public class InteractableController : MonoBehaviour{
             check = false;
             active = false;
             Deactivate();
+            interactAbleIndicator.SetActive(false);
         }
     }
 
