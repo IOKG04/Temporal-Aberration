@@ -32,7 +32,7 @@ public class InteractableController : MonoBehaviour{
         }
     }
 
-    void Activate(){
+    public void Activate(){
         TextMeshProUGUI tmp = textBox.GetComponentInChildren<TextMeshProUGUI>();
         tmp.text = lines[taMacro].l[taMini];
         textBox.SetActive(true);
@@ -44,7 +44,7 @@ public class InteractableController : MonoBehaviour{
             deactivateNext = true;
         }
     }
-    void Deactivate(){
+    public void Deactivate(){
         textBox.SetActive(false);
         deactivateNext = false;
     }

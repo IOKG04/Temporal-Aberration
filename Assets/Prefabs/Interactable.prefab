@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 3072664244286356317}
   - component: {fileID: 3577616424756947941}
   - component: {fileID: 7264252565641961839}
-  - component: {fileID: 400857438929277027}
-  - component: {fileID: 2224630653241517863}
+  - component: {fileID: -9039248340168759241}
   m_Layer: 0
   m_Name: Interactable
   m_TagString: Interactable
@@ -114,42 +113,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &400857438929277027
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5042287627846781995}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1
---- !u!114 &2224630653241517863
+--- !u!114 &-9039248340168759241
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,8 +126,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textBox: {fileID: 0}
-  interactAbleIndicator: {fileID: 0}
+  interactableIndicator: {fileID: 0}
   check: 0
-  active: 0
-  timesActivated: 0
+  deactivateNext: 0
+  taMacro: 0
+  taMini: 0
   lines: []
