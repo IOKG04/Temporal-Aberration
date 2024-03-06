@@ -6,42 +6,51 @@ using UnityEngine;
 using UnityEngine.Timeline;
 
 public class InteractableController : MonoBehaviour{
-    public GameObject textBox, interactAbleIndicator;
-    public bool check, active;
-    public int timesActivated;
-    public string[] lines;
+    public GameObject textBox, interactableIndicator;
+    public bool check, deactivateNext;
+    public int taMacro, taMini;
+    public LineCollection[] lines;
 
     void Update(){
         if(check && Input.GetButtonDown("interact")){
-            active = !active;
-            if(active) Activate();
-            else Deactivate();
+            if(deactivateNext) Deactivate();
+            else Activate();
         }
     }
     void OnTriggerEnter2D(Collider2D col){
         if(col.CompareTag("Player")){
             check = true;
-            interactAbleIndicator.SetActive(true);
+            interactableIndicator.SetActive(true);
         }
     }
     void OnTriggerExit2D(Collider2D col){
         if(col.CompareTag("Player")){
             check = false;
-            active = false;
             Deactivate();
-            interactAbleIndicator.SetActive(false);
+            interactableIndicator.SetActive(false);
+            taMini = 0;
         }
     }
 
     void Activate(){
         TextMeshProUGUI tmp = textBox.GetComponentInChildren<TextMeshProUGUI>();
-        tmp.text = lines[timesActivated];
+        tmp.text = lines[taMacro].l[taMini];
         textBox.SetActive(true);
 
-        timesActivated++;
-        timesActivated %= lines.Length;
+        taMini++;
+        if(taMini >= lines[taMacro].l.Length){
+            taMini = 0;
+            taMacro = (taMacro + 1) % lines.Length;
+            deactivateNext = true;
+        }
     }
     void Deactivate(){
         textBox.SetActive(false);
+        deactivateNext = false;
     }
+}
+
+[System.Serializable]
+public struct LineCollection{
+    public string[] l;
 }
