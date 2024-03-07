@@ -1914,13 +1914,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textBox: {fileID: 243357131}
-  interactAbleIndicator: {fileID: 1193209403}
+  interactableIndicator: {fileID: 1193209403}
   check: 0
-  active: 0
-  timesActivated: 0
+  deactivateNext: 0
+  taMacro: 0
+  taMini: 0
   lines:
-  - A gun
-  - What did you expect?
+  - l:
+    - A gun
+  - l:
+    - What did you expect?
+    - To get a second one?
+    - Silly you
 --- !u!43 &655045940
 Mesh:
   m_ObjectHideFlags: 0

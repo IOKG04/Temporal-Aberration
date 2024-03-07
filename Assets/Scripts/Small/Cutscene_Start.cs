@@ -16,6 +16,7 @@ public class Cutscene : MonoBehaviour{
     void Start(){
         pc.enabled = false;
         ic.enabled = false;
+        FadeImage.gameObject.SetActive(true);
     }
     void FixedUpdate(){
         startingTimer += Time.fixedDeltaTime;
