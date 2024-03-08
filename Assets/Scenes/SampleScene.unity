@@ -3695,6 +3695,175 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b1cff9c36a741daaae3960d6b426808, type: 3}
+--- !u!1001 &1401827926
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -9039248340168759241, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+      propertyPath: textBox
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -9039248340168759241, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+      propertyPath: lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -9039248340168759241, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+      propertyPath: interactableIndicator
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -9039248340168759241, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+      propertyPath: lines.Array.data[0].l.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -9039248340168759241, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+      propertyPath: lines.Array.data[1].l.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -9039248340168759241, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+      propertyPath: lines.Array.data[0].l.Array.data[0]
+      value: This is a demo/sample level I built once
+      objectReference: {fileID: 0}
+    - target: {fileID: -9039248340168759241, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+      propertyPath: lines.Array.data[0].l.Array.data[1]
+      value: If you can reach this without it just being a filler, something went
+        wrong
+      objectReference: {fileID: 0}
+    - target: {fileID: -9039248340168759241, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+      propertyPath: lines.Array.data[0].l.Array.data[2]
+      value: Please tell me how you got here
+      objectReference: {fileID: 0}
+    - target: {fileID: -9039248340168759241, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+      propertyPath: lines.Array.data[0].l.Array.data[3]
+      value: Thanks, the dev :3
+      objectReference: {fileID: 0}
+    - target: {fileID: -9039248340168759241, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+      propertyPath: lines.Array.data[1].l.Array.data[0]
+      value: If you want to explore this, you can, but dont think this is gonna be
+        good
+      objectReference: {fileID: 0}
+    - target: {fileID: -9039248340168759241, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+      propertyPath: lines.Array.data[1].l.Array.data[1]
+      value: If you can reach this without it just being a filler, something went
+        wrong
+      objectReference: {fileID: 0}
+    - target: {fileID: -9039248340168759241, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+      propertyPath: lines.Array.data[1].l.Array.data[2]
+      value: Please tell me how you got here
+      objectReference: {fileID: 0}
+    - target: {fileID: -9039248340168759241, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+      propertyPath: lines.Array.data[1].l.Array.data[3]
+      value: Thanks, the dev :3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3072664244286356317, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.21875
+      objectReference: {fileID: 0}
+    - target: {fileID: 3072664244286356317, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.875
+      objectReference: {fileID: 0}
+    - target: {fileID: 3072664244286356317, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3072664244286356317, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3072664244286356317, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3072664244286356317, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3072664244286356317, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3072664244286356317, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3072664244286356317, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3072664244286356317, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3577616424756947941, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 79232d104464b1d139d0490208a8c8fa, type: 3}
+    - target: {fileID: 5042287627846781995, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+      propertyPath: m_Name
+      value: Sign
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5042287627846781995, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1401827928}
+  m_SourcePrefab: {fileID: 100100000, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+--- !u!1 &1401827927 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5042287627846781995, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+  m_PrefabInstance: {fileID: 1401827926}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1401827928
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401827927}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.125}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.0625}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.3125}
+  m_EdgeRadius: 0.25
 --- !u!43 &1414732133
 Mesh:
   m_ObjectHideFlags: 0
@@ -12593,3 +12762,4 @@ SceneRoots:
   - {fileID: 1279927734}
   - {fileID: 740412123}
   - {fileID: 371883399}
+  - {fileID: 1401827926}

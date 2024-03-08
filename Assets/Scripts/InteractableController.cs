@@ -17,10 +17,11 @@ public class InteractableController : MonoBehaviour{
             else Activate();
         }
     }
-    void OnTriggerEnter2D(Collider2D col){
-        if(col.CompareTag("Player")){
+    void OnTriggerStay2D(Collider2D col){
+        if(col.CompareTag("Player") && interactableIndicator.GetComponent<InteractableIndicator>().activeIC == null){
             check = true;
             interactableIndicator.SetActive(true);
+            interactableIndicator.GetComponent<InteractableIndicator>().activeIC = this;
         }
     }
     void OnTriggerExit2D(Collider2D col){
@@ -29,6 +30,7 @@ public class InteractableController : MonoBehaviour{
             Deactivate();
             interactableIndicator.SetActive(false);
             taMini = 0;
+            interactableIndicator.GetComponent<InteractableIndicator>().activeIC = null;
         }
     }
 
