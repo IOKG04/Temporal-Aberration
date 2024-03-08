@@ -1995,11 +1995,11 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1184765631}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &519420033
 MonoBehaviour:
@@ -2016,6 +2016,11 @@ MonoBehaviour:
   target: {fileID: 530714179}
   zOffset: -10
   thisCamera: {fileID: 0}
+  parent: {fileID: 1184765631}
+  screenShakeStrength: 0
+  screenShakeTimer: 0
+  screenShakeFrameCounter: 0
+  screenShakeFrameCount: 1
 --- !u!1001 &529581989
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2330,6 +2335,9 @@ MonoBehaviour:
   velocityChangeTimer: {x: 0, y: 0}
   velocityChangeTime: 0.2
   speed: 4
+  walkSpeed: 4
+  runSpeed: 6
+  gun: {fileID: 1632156400}
   hitPoints: 5
   maxHitPoints: 5
   spriteRenderer: {fileID: 530714178}
@@ -3707,6 +3715,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1131837689}
   m_CullTransparentMesh: 1
+--- !u!1 &1184765630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1184765631}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1184765631
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184765630}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 519420032}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1193209403
 GameObject:
   m_ObjectHideFlags: 0
@@ -4108,6 +4148,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 7ec5d17340aaf4ab0b905785df075e2c, type: 3}
+    - target: {fileID: 3577616424756947941, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5042287627846781995, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
       propertyPath: m_Name
       value: Bed_AP1
@@ -4283,6 +4327,7 @@ MonoBehaviour:
   bullet: {fileID: 8191538004837939424, guid: 891cd81bcb3b5ad0c8857da5b0c5177e, type: 3}
   bulletSpeed: 6.666667
   server: {fileID: 530714183}
+  aimable: 0
 --- !u!1001 &1734087526
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8463,7 +8508,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 519420032}
+  - {fileID: 1184765631}
   - {fileID: 204889435}
   - {fileID: 619394802}
   - {fileID: 1793331386}
