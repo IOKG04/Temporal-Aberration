@@ -562,7 +562,7 @@ PrefabInstance:
       objectReference: {fileID: 1193209403}
     - target: {fileID: -9039248340168759241, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
       propertyPath: lines.Array.data[0].l.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -9039248340168759241, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
       propertyPath: lines.Array.data[1].l.Array.size
@@ -570,15 +570,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -9039248340168759241, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
       propertyPath: lines.Array.data[0].l.Array.data[0]
-      value: A table with a picture of a cute cat on it
+      value: 'How to run away from enemies:'
       objectReference: {fileID: 0}
     - target: {fileID: -9039248340168759241, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
       propertyPath: lines.Array.data[0].l.Array.data[1]
-      value: To aim, use the mouse and point to what you want to shoot at.
+      value: Don't concentrate on aiming your gun perfectly, then run.
       objectReference: {fileID: 0}
     - target: {fileID: -9039248340168759241, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
       propertyPath: lines.Array.data[0].l.Array.data[2]
-      value: To shoot, just press or hold left mouse button.
+      value: To do so, press Shift or Space.
       objectReference: {fileID: 0}
     - target: {fileID: -9039248340168759241, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
       propertyPath: lines.Array.data[0].l.Array.data[3]
@@ -1501,11 +1501,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -9039248340168759241, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
       propertyPath: lines.Array.data[1].l.Array.size
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -9039248340168759241, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
       propertyPath: lines.Array.data[0].l.Array.data[0]
-      value: 'Safety information about your gun:'
+      value: 'Safety information about guns:'
       objectReference: {fileID: 0}
     - target: {fileID: -9039248340168759241, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
       propertyPath: lines.Array.data[0].l.Array.data[1]
@@ -1522,12 +1522,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -9039248340168759241, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
       propertyPath: lines.Array.data[1].l.Array.data[0]
-      value: 'A letter you wrote to your future self:'
+      value: 'How to survive a gun duel:'
       objectReference: {fileID: 0}
     - target: {fileID: -9039248340168759241, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
       propertyPath: lines.Array.data[1].l.Array.data[1]
-      value: Hey future me, please remember that violence is an option if you're
-        attacked first.
+      value: Simple, just dont get hit.
+      objectReference: {fileID: 0}
+    - target: {fileID: -9039248340168759241, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+      propertyPath: lines.Array.data[1].l.Array.data[2]
+      value: If you do get hit though, do not worry, you can endure up to five hits;
+      objectReference: {fileID: 0}
+    - target: {fileID: -9039248340168759241, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+      propertyPath: lines.Array.data[1].l.Array.data[3]
+      value: Every hit you will lose one part of the cross on your body.
+      objectReference: {fileID: 0}
+    - target: {fileID: -9039248340168759241, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
+      propertyPath: lines.Array.data[1].l.Array.data[4]
+      value: If you lose all, you die.
       objectReference: {fileID: 0}
     - target: {fileID: 3072664244286356317, guid: f3036cb9fef7171e296c59d032daef9c, type: 3}
       propertyPath: m_LocalPosition.x
