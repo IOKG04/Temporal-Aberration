@@ -14,10 +14,12 @@ public class PlayerGunController : MonoBehaviour{
     public TAServer server;
     private float localTimeScale;
     public bool aimable;
+    private AudioSource aSource;
 
     void Start(){
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         reloadTimer = reloadTime;
+        aSource = gameObject.GetComponent<AudioSource>();
     }
     void Update(){
         if(aimable){
@@ -41,8 +43,10 @@ public class PlayerGunController : MonoBehaviour{
                 newBullet.GetComponent<BulletController>().server = server;
                 newBullet.GetComponent<BulletController>().velocity = newBullet.transform.up.normalized * bulletSpeed;
                 reloadTimer = 0f;
-                // screen shake
+                // fx
                 Camera.main.GetComponent<CameraController>().ShakeScreen(0.25f, 0.13f);
+                aSource.pitch = Random.Range(0.8f, 1.2f);
+                aSource.Play();
             }
         }
         else{

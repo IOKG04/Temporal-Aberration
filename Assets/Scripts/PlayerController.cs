@@ -20,9 +20,11 @@ public class PlayerController : MonoBehaviour{
     public VoidTask hitPointReduction;
     public SpriteRenderer spriteRenderer;
     public Sprite[] sprites;
+    private AudioSource aSource;
 
     void Start(){
         rb = gameObject.GetComponent<Rigidbody2D>();
+        aSource = gameObject.GetComponent<AudioSource>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         hitPoints = maxHitPoints;
         hitPointReduction += () => {
@@ -34,8 +36,10 @@ public class PlayerController : MonoBehaviour{
             if(hitPoints <= 0){
                 Lose();
             }
-            // screen shake
+            // fx
             Camera.main.GetComponent<CameraController>().ShakeScreen(0.5f, Mathf.Lerp(0.2f, 0.35f, 1 - hitPoints / (float)maxHitPoints));
+            aSource.pitch = UnityEngine.Random.Range(0.9f, 1.1f) + Mathf.Lerp(0f, -.2f, 1 - hitPoints / (float)maxHitPoints);
+            aSource.Play();
         };
         // set TAServer stuff
         try{

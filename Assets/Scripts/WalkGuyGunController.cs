@@ -22,8 +22,10 @@ public class WalkGuyGunController : MonoBehaviour{
 
     public TAServer server;
     private float localTimeScale;
+    private AudioSource aSource;
 
     void Start(){
+        aSource = gameObject.GetComponent<AudioSource>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         reloadTimer = 0f;
         showReloadAnimation = false;
@@ -63,6 +65,9 @@ public class WalkGuyGunController : MonoBehaviour{
                     newBullet.GetComponent<BulletController>().velocity = newBullet.transform.up.normalized * bulletSpeed;
                     newBullet.tag = "EnemyBullet";
                     showReloadAnimation = true;
+                    // fx
+                    aSource.pitch = Random.Range(1.3f, 1.7f);
+                    aSource.Play();
                 }
                 reloadTimer = 0f;
             }

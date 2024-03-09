@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using System.Security;
 using UnityEngine;
 
+/*
+Screen shake code heavily inspired by the answer by Martin-Schulz in
+https://forum.unity.com/threads/screen-shake-effect.22886/
+*/
+
 public class CameraController : MonoBehaviour{
     public Transform target;
     public float zOffset;
